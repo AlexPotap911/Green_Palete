@@ -1,0 +1,153 @@
+.about {
+  margin-bottom: $mb-section;
+  @include mediaLaptop {
+    margin-bottom: $mb-section-laptop;
+  }
+  @include mediaTablet {
+    margin-bottom: $mb-section-tablet;
+  }
+
+  position: relative;
+  &::before {
+    content: url('../img/about/about-bg-r.png');
+    position: absolute;
+    left: 0;
+    bottom: -25%;
+    z-index: -1;
+    @include mediaLaptop {
+      display: none;
+    }
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 22px;
+    @include mediaLaptop {
+      grid-template-rows: 1fr auto;
+    }
+    @include mediaTablet {
+      grid-template-columns: auto auto;
+      column-gap: 34px;
+    }
+    @media (max-width: 572px) {
+      gap: 5px;
+    }
+    @include mobile-l {
+      display: block;
+    }
+  }
+  &__content {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: auto;
+
+    grid-row: 1/2;
+    grid-column: 2/3;
+    @include mediaTablet {
+      font-size: 16px;
+      max-width: 344px;
+    }
+    @include mobile-s {
+      grid-column: auto;
+      margin-top: 0;
+    }
+  }
+  picture {
+    grid-row: 1/3;
+    grid-column: span 1;
+    @include mediaTablet {
+      grid-row: 1/2;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    @include mobile-l {
+      margin-bottom: 20px;
+    }
+  }
+  &__content-block:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @include mobile-s {
+    &__content .about__content-block {
+      margin-bottom: 20px;
+    }
+  }
+  &__content em {
+    font-family: $font-secondary;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 400;
+    @include mediaTablet {
+      font-size: 20px;
+    }
+  }
+  &__sub-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    @include mediaTablet {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    @include mobile-s {
+      font-size: 24px;
+    }
+  }
+  &__achiev-wrapper {
+    margin-top: 30px;
+    margin-bottom: auto;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    @include mediaTablet {
+      margin-top: 20px;
+      grid-row: 2/3;
+      grid-column: 1/3;
+    }
+    @include mobile-s {
+      grid-row: 3/4;
+      grid-column: span 1;
+    }
+  }
+  &__achiev {
+    color: $color-number;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @include mediaLaptop {
+      gap: 20px;
+    }
+    @include mediaTablet {
+      justify-content: center;
+    }
+    @include mobile-s {
+      gap: 0;
+    }
+  }
+  &__achiev-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    text-align: center;
+  }
+  &__achiev-block p {
+    font-size: 18px;
+    font-weight: 500;
+    @include mediaLaptop {
+      font-size: 14px;
+    }
+  }
+  &__achiev-num {
+    font-size: 48px;
+    font-weight: 600;
+    @include mediaLaptop {
+      font-size: 36px;
+    }
+    @include mobile-s {
+      font-size: 28px;
+    }
+  }
+}

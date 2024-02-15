@@ -1,0 +1,10 @@
+.question {
+  margin-bottom:calc($mb-section - 40px);
+  @include mediaLaptop {
+    margin-bottom: calc($mb-section-laptop - 40px);
+  }
+  @include mediaTablet {
+    margin-bottom: calc($mb-section-tablet - 40px);
+  }
+}
+

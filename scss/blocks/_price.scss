@@ -1,0 +1,108 @@
+.price {
+  margin-bottom: $mb-section;
+  @include mediaLaptop {
+    margin-bottom: $mb-section-laptop;
+  }
+  @include mediaTablet {
+    margin-bottom: $mb-section-tablet;
+  }
+  
+  position: relative;
+  &::after {
+    content: url('../img/price/price-bg-right.png');
+    position: absolute;
+    right: 0;
+    top: -50px;
+    z-index: -1;
+    @include mediaLaptop {
+      content: url('../img/price/price-bg-right-1024.png');
+    }
+    @include mediaTablet {
+       content: url('../img/price/price-bg-right-768.png');
+      top: -60px;
+    }
+    @include mobile-l {
+      content: url('../img/price/price-bg-right-425.png');
+      top: 0;
+    }
+  }
+  &__inner {
+    display: flex;
+    gap: 20px;
+    @include mediaTablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__block {
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px 90px;
+    @include mediaLaptop {
+      padding: 60px 0;
+    }
+    @include mediaTablet {
+      padding: 50px 0;
+    }
+    @include mobile-m {
+      padding: 30px 0;
+    }
+    @include border;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 94px;
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: auto;
+      margin-bottom: 70px;
+      @include mobile-l {
+        height: 100%;
+        font-size: 28px;
+        margin: 50px 0;
+      }
+      @include mobile-s {
+        margin: 30px 0;
+      }
+    }
+    @include mediaTablet {
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 24px;
+    }
+    @include mobile-l {
+      width: 100%;
+      border-radius: 18px;
+    }
+  }
+  &__block-title {
+    margin-bottom: 40px;
+    @include mediaLaptop {
+      padding: 0 40px;
+    }
+    @include mobile-l {
+      font-size: 24px;
+    }
+  }
+  &__block-list {
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    @include mediaLaptop {
+      padding: 0 40px;
+    }
+    @include mobile-l {
+      font-size: 18px;
+    }
+  }
+  &__block-btn {
+    @include btn;
+    @include mediaLaptop {
+      border-radius: 0;
+    }
+  }
+}

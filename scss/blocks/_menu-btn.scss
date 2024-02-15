@@ -1,0 +1,79 @@
+.menu__btn {
+  display: none;
+  @include mediaTablet {
+    display: block;
+  }
+  @include menu-btn;
+
+  .icon-left {
+    border-radius: 5px 0 0 5px;
+
+    @include icon(3px, 30px);
+    left: 0px;
+
+    &:before {
+      border-radius: 5px 0 0 5px;
+
+      @include icon-before(3px, 30px, -15px);
+    }
+
+    &:after {
+      border-radius: 5px 0 0 5px;
+
+      @include icon-after(3px, 30px, 15px);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon-right {
+    border-radius: 0 5px 5px 0;
+
+    @include icon(3px, 30px);
+    left: 30px;
+    top: -3px;
+
+    &:before {
+       border-radius: 0 5px 5px 0;
+      @include icon-before(3px, 30px, -15px);
+    }
+
+    &:after {
+       border-radius: 0 5px 5px 0;
+      @include icon-after(3px, 30px, 15px);
+    }
+  }
+
+  &.open {
+    .icon-left {
+      transition-duration: 0.3s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(45deg) translate(7px, 0px);
+      }
+
+      &:after {
+        transform: rotateZ(-45deg) translate(7px, 0px);
+      }
+    }
+
+    .icon-right {
+      transition-duration: 0.3s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(-45deg) translate(-7px, 0px);
+      }
+
+      &:after {
+        transform: rotateZ(45deg) translate(-7px, 0px);
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

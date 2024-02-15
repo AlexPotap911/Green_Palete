@@ -1,0 +1,39 @@
+.footer {
+  background-color: $color-secondary-bg;
+  padding: 40px 0 47px;
+	@include mobile-l {
+			padding: 20px 0 22px;
+	}
+  &__inner {
+    display: flex;
+    column-gap: 22px;
+  }
+  &__left {
+    width: 100%;
+    text-align: center;
+  }
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__right {
+    width: 100%;
+    padding-left: 16px;
+  }
+
+  &__title {
+    margin: 42px 0 0;
+    max-width: 330px;
+		@include mobile-l {
+				font-size: 18px;
+				 margin: 50px 0 0;
+		}
+  }
+}
+.social {
+  &__list {
+    display: flex;
+    column-gap: 16px;
+    justify-content: center;
+  }
+}

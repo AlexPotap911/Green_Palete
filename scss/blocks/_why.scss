@@ -1,0 +1,81 @@
+.why {
+  margin-bottom: $mb-section;
+   @include mediaLaptop {
+    margin-bottom: $mb-section-laptop;
+  }
+  @include mediaTablet {
+    margin-bottom: $mb-section-tablet;
+  }
+  position: relative;
+  &::before {
+    content: url('../img/why/why-left-bg.png');
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    z-index: -1;
+    @include mediaLaptop {
+      display: none;
+    }
+  }
+  &::after {
+    content: url('../img/why/why-bg.png');
+    position: absolute;
+    top: -70px;
+    right: 0;
+    @include mediaLaptop {
+      content: url('../img/why/why-bg-1024.png');
+      position: absolute;
+      top: 0px;
+      right: 0;
+    }
+    @include mediaTablet {
+      content: url('../img/why/why-bg-768.png');
+    }
+    @include mobile-l {
+      content: url('../img/why/why-bg-320.png');
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    @include mediaTablet {
+      column-gap: 0;
+    }
+  }
+  &__content {
+    font-size: 28px;
+    @include mediaTablet {
+      font-size: 18px;
+    }
+    @include mobile-s {
+      font-size: 14px;
+    }
+    font-weight: 600;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: clamp(0.625rem, -0.398rem + 5.11vw, 3.438rem);
+    padding-left: 10px;
+    @include mediaTablet {
+      padding-left: 0px;
+    }
+    list-style-type: none;
+    counter-reset: my-counter;
+    .pl-10 {
+      padding-left: clamp(0rem, -0.227rem + 1.14vw, 0.625rem);
+    }
+    .pl-70 {
+      padding-left: clamp(0.313rem, -1.165rem + 7.39vw, 4.375rem);
+    }
+    .pl-100 {
+      padding-left: clamp(0.625rem, -1.42rem + 10.23vw, 6.25rem);
+    }
+  }
+  &__list-item::before {
+    content: counter(my-counter);
+    counter-increment: my-counter;
+    padding-right: 7px;
+  }
+}

@@ -1,0 +1,23 @@
+
+//Base
+@import './base/_reset.scss';
+@import './base/vars';
+@import './base/mixins';
+@import './base/base';
+
+// Blocks
+@import './blocks/header';
+@import './blocks/menu-btn';
+@import './blocks/about';
+@import './blocks/why';
+@import './blocks/projects';
+@import './blocks/services';
+@import './blocks/price';
+@import './blocks/work';
+@import './blocks/team';
+@import './blocks/questions';
+@import './blocks/accordion';
+@import './blocks/details';
+@import './blocks/reviews';
+@import './blocks/contacts';
+@import './blocks/footer';

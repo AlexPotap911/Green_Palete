@@ -1,0 +1,79 @@
+body {
+  font-family: $font-main;
+  background-color: $color-main-bg;
+  color: $color-page;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.title {
+  font-size: $fz-title;
+  @include mediaLaptop {
+    font-size: $fz-title-laptop;
+  }
+  @include mediaTablet {
+    font-size: $fz-title-tablet;
+  }
+  @include mobile-m {
+      font-size: $fz-title-mobile;
+  }
+  @include mobile-s {
+      font-size: $fz-title-mobile-s;
+  }
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: $mb-title;
+  @include mediaLaptop {
+    margin-bottom: $mb-title-laptop;
+  }
+  @include mobile-s {
+    font-size: $fz-title-mobile;
+    margin-bottom: $mb-title-mobile;
+  }
+}
+.descr {
+  max-width:clamp(21.25rem, 15.795rem + 27.27vw, 36.25rem);
+  font-weight: 600;
+  font-size: 28px;
+  @include mediaTablet {
+      font-size: 24px;
+  }
+  @include mobile-s {
+      font-size: 14px;
+  }
+  margin-bottom: 50px;
+  @include mediaTablet {
+      margin-bottom: 30px;
+  }
+  @include mobile-s {
+      margin-bottom: 20px;
+  }
+}
+.none {
+  display: none;
+}
+
+.logo {
+  a {
+    text-align: center;
+  }
+  img {
+    margin-bottom: 2px;
+  }
+  p {
+    font-family: $font-logo;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+.none {
+  display: none !important;
+}
+
+
